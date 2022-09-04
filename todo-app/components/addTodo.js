@@ -10,8 +10,8 @@ const AddTodo = (props) => {
             {props.todo.map((item) => (
                 <div>
                     {props.done == false ?
-                        <div  onClick={() => props.setDone(item.key)}>
-                            <TodoItem cle={item.key} name={item.text} done={props.done} delete={props.delete}/>
+                        <div>
+                            <TodoItem cle={item.key} name={item.text} done={props.done} delete={props.delete} setDone={props.setDone}/>
                         </div>
                         :
                         <div>
