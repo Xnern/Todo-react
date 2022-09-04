@@ -65,7 +65,6 @@
   padding: 1em 0.5em 1em 0.5em;
   border-radius: 10px;
   margin-bottom: 10px;
-  z-index: 100;
 }
 
 .taskContainer:hover{
@@ -79,7 +78,6 @@
   padding: 1em 0.5em 1em 0.5em;
   border-radius: 10px;
   margin-bottom: 10px;
-  z-index: 0;
 }
 
 .delete{
@@ -93,7 +91,6 @@
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  z-index: 1;
 }
 
 .img{
