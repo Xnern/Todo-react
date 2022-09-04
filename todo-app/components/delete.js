@@ -5,7 +5,7 @@ import React from 'react';
 const Delete = (props) => {
 
   return (
-    <button className={styles.delete} onClick={() => props.delete(props.cle, props.done)}><AiFillDelete className={styles.img}/></button>
+    <span className={styles.delete} onClick={() => props.delete(props.cle, props.done)}><AiFillDelete className={styles.img}/></span>
   )
 }
 

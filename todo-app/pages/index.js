@@ -16,8 +16,8 @@ export default class Home extends Component {
         {key: 2, text: "Faire la vaisselle"},
       ],
       fait: [
-        {key: 3, text: "Faire le repassage"},
-        {key: 4, text: "Faire la cuisine"},
+        {key: 1, text: "Faire le repassage"},
+        {key: 2, text: "Faire la cuisine"},
       ],
     }
     this.handleChange = this.handleChange.bind(this);
@@ -38,7 +38,9 @@ export default class Home extends Component {
     //Supprimer un élément du tableau aFaire
     let newAFaire = this.state.aFaire.filter((item) => item.key != key);
     //Ajouter l'élément supprimé dans le tableau fait
-    let newFait = [...this.state.fait, this.state.aFaire.filter((item) => item.key == key)[0]];
+    let item = this.state.aFaire.find((item) => item.key == key);
+    item.key = this.state.fait.length + 1;
+    let newFait = [...this.state.fait, item];
     this.setState({aFaire: newAFaire, fait: newFait});
   }
 
